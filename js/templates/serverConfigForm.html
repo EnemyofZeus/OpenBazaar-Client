@@ -26,7 +26,7 @@
 
             <div class="flexCol-8 borderRight0 custCol-border <% ob.errors.name && print('invalid') %>">
               <input name="name" type="text" id="fld_name" class="fieldItem" value="<%= ob.name %>">
-            </div>            
+            </div>
           </div>
 
           <div class="flexRow">
@@ -48,7 +48,9 @@
 
             <div class="flexCol-8 borderRight0 custCol-border <% ob.errors.server_ip && print('invalid') %>">
               <input name="server_ip" type="text" id="fld_server" placeholder="" class="fieldItem" required="" value="<%= ob.server_ip %>">
-              <div class="btn btn-txt btn-corner btn-cornerTR custCol-secondary ion-locked
+              <input type="radio" class="fieldItem" id="enableSSLOn" name="ssl" value="true" /><label for="enableSSLYes" class="radioLabel"><%= polyglot.t('SSLOn') %></label>
+              <input type="radio" class="fieldItem" id="enableSSLOff" name="ssl" value="false" checked /><label for="enableSSLNo" class="radioLabel"><%= polyglt.t('SSLOff')</label>
+              <!-- <div class="btn btn-txt btn-corner btn-cornerTR custCol-secondary ion-locked
                           positionAbsolute tooltip <% if(!ob.SSL){ %> hide <% } %>  js-sslOn"
                    data-tooltip="<%= polyglot.t('SSLIsOn') %>">
                 <%= polyglot.t('SSLOn') %>
@@ -58,7 +60,7 @@
                    data-tooltip="<%= polyglot.t('SSLIsOff') %>">
                 <%= polyglot.t('SSLOff') %>
               </div>
-            </div>
+            </div> -->
           </div>
 
           <div class="flexRow">
@@ -169,7 +171,7 @@
             <div class="flexCol-8 borderRight0 custCol-border <% ob.errors.heartbeat_socket_port && print('invalid') %>">
               <input name="heartbeat_socket_port" type="text" id="fld_heartbeat_socket_port" placeholder="" class="fieldItem" value="<%= ob.heartbeat_socket_port %>">
             </div>
-          </div>            
+          </div>
 
          </div>
       </form>
